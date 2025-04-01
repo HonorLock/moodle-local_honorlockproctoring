@@ -8,7 +8,7 @@ const injectSdkScript = async() => {
         console.log('moodle script loaded!');
         scriptLoaded = true;
     };
-    sdkScript.src = "https://unpkg.com/@honorlock/integration-sdk-js-moodle";
+    sdkScript.src = "https://cdn.jsdelivr.net/npm/@honorlock/integration-sdk-js-moodle";
     document.getElementsByTagName('head')[0].appendChild(sdkScript);
 
     const injectedAt = new Date();
@@ -16,6 +16,8 @@ const injectSdkScript = async() => {
         const poll = ()=> {
             // 10s timeout
             if (new Date().getTime() - injectedAt.getTime() > 10000) {
+                // eslint-disable-next-line no-console
+                console.log("honorlockproctoring::injectSdkScript timed out");
                 return reject('injectSdkScript timed out');
             }
 
