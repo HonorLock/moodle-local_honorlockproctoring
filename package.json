@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HonorLock/moodle_honorlockproctoring.git"
+    "url": "git+https://github.com/HonorLock/moodle-local_honorlockproctoring.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/HonorLock/moodle_honorlockproctoring/issues"
+    "url": "https://github.com/HonorLock/moodle-local_honorlockproctoring/issues"
   },
-  "homepage": "https://github.com/HonorLock/moodle_honorlockproctoring#readme",
+  "homepage": "https://github.com/HonorLock/moodle-local_honorlockproctoring#readme",
   "devDependencies": {
     "grunt": "^1.6.1"
   }
