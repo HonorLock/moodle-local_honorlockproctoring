@@ -73,7 +73,7 @@ class check_deprecated_test extends \advanced_testcase {
 
         $course = $this->getDataGenerator()->create_course();
         // The quiz generator takes the form field 'quizpassword' and stores it in quiz.password.
-        $hlquiz =$this->getDataGenerator()->create_module('quiz', [
+        $hlquiz = $this->getDataGenerator()->create_module('quiz', [
             'course' => $course->id,
             'name' => 'Proctored midterm',
             'quizpassword' => HL_NO_EDIT . 'placeholder',
