@@ -33,6 +33,13 @@ $string['honorlock_client_secret'] = 'Honorlock Client Secret';
 $string['honorlock_client_secret_description'] = 'The Organization Client Secret generated for your organization in app.honorlock.com';
 $string['cachedef_honorlock_api_token'] = 'Honorlock API Token Cache';
 
+$string['deprecationnotice'] = 'This plugin is deprecated and no longer supported. It works only with Moodle 3.9 to 4.3 and will not receive further updates. To keep using Honorlock on a supported Moodle version, install the <a href="{$a}">Honorlock quiz access plugin (quizaccess_honorlock)</a>. Contact Honorlock support if you need help moving your exams.';
+$string['check_deprecated_name'] = 'Honorlock Proctoring Service (deprecated)';
+$string['check_deprecated_action'] = 'Get the Honorlock quiz access plugin';
+$string['check_deprecated_summary_noquizzes'] = 'This plugin is deprecated and no longer supported. No quizzes use a Honorlock-managed password, so you can replace it with the Honorlock quiz access plugin.';
+$string['check_deprecated_summary_quizzes'] = 'This plugin is deprecated and no longer supported. {$a} quiz(zes) still use a Honorlock-managed password. Move these quizzes to the Honorlock quiz access plugin before uninstalling this one, or students will be asked for a password they do not have.';
+$string['check_deprecated_details_more'] = 'And {$a} more.';
+
 $string['privacy:metadata:local_honorlockproctoring'] = "In order to integrate with the 'Honorlock' proctoring service, user data needs to be exchanged with that service.";
 $string['privacy:metadata:local_honorlockproctoring:user_id'] = "The exam taker's 'user ID' is sent from Moodle for identification on the remote system.";
 $string['privacy:metadata:local_honorlockproctoring:email'] = "The exam taker's 'email' is sent to the remote system to allow for better user experience.";
