@@ -114,6 +114,15 @@ function local_honorlockproctoring_extend_navigation(global_navigation $navigati
 }
 
 /**
+ * Status checks for Site administration > Reports > System status.
+ *
+ * @return \core\check\check[]
+ */
+function local_honorlockproctoring_status_checks(): array {
+    return [new \local_honorlockproctoring\check\deprecated()];
+}
+
+/**
  * Check if quiz is honorlock enabled.
  *
  * @param object $quiz

@@ -28,6 +28,18 @@ if ($hassiteconfig) {
     $settings = new admin_settingpage('local_honorlockproctoring', get_string('settings_header', 'local_honorlockproctoring'));
 
     $settings->add(
+        new admin_setting_heading(
+            'local_honorlockproctoring/deprecationnotice',
+            '',
+            html_writer::div(
+                get_string('deprecationnotice', 'local_honorlockproctoring',
+                    \local_honorlockproctoring\check\deprecated::REPLACEMENT_URL),
+                'alert alert-warning'
+            )
+        )
+    );
+
+    $settings->add(
         new admin_setting_configtext(
             'local_honorlockproctoring/honorlock_url',
             get_string('honorlock_url', 'local_honorlockproctoring'),
