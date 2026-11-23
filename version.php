@@ -25,7 +25,9 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'local_honorlockproctoring';
-$plugin->release = '1.0.5';
-$plugin->version = 2023120601;
+// Deprecated: final release. Replaced by quizaccess_honorlock.
+$plugin->release = '1.0.6 (deprecated)';
+$plugin->version = 2026112300;
 $plugin->requires = 2020061500;
+$plugin->supported = [309, 403];
 $plugin->maturity = MATURITY_STABLE;

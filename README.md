@@ -1,5 +1,15 @@
 # Honorlock Proctoring
 
+> [!WARNING]
+> **This plugin is deprecated and no longer supported.**
+> It works only with Moodle 3.9 to 4.3, which are no longer supported by Moodle ([Moodle releases](https://moodledev.io/general/releases)), and it will not receive further updates. This repository is archived.
+>
+> To use Honorlock with a supported Moodle version, install the **[Honorlock quiz access plugin (`quizaccess_honorlock`)](https://marketplace.moodle.com/plugins/quizaccess_honorlock)**.
+>
+> **Before you uninstall this plugin:** quizzes set up for Honorlock through this plugin use a password managed by Honorlock. If you remove the plugin without moving those quizzes to the quiz access plugin, students will be asked for a password they do not have. Go to **Site administration > Reports > System status** and open the **Honorlock Proctoring Service (deprecated)** check to see which quizzes are affected. Contact Honorlock support if you need help moving your exams.
+>
+> After uninstalling, also remove the web service setup this plugin needed: suspend or delete the Honorlock API user, delete its token, and remove the related external service and role.
+
 Welcome to the Moodle plugin for integrating with the Honorlock Proctoring! This plugin provides seamless integration between Moodle and Honorlock Proctoring, enabling online assessments to be proctored and monitored in real time. With this plugin, Moodle administrators can ensure the authenticity and validity of online exams, enhancing the reliability and trustworthiness of online education. 
 
 The Honorlock Proctoring Moodle plugin is easy to install and use, and requires minimal configuration. It provides a comprehensive solution for proctoring online exams, and is designed to be flexible and adaptable to the specific needs of each institution.
