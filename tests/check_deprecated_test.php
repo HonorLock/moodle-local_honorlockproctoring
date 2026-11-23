@@ -53,7 +53,7 @@ class check_deprecated_test extends \advanced_testcase {
         $this->resetAfterTest();
 
         $course = $this->getDataGenerator()->create_course();
-        $this->getDataGenerator()->create_module('quiz', ['course' => $course->id, 'password' => 'regular']);
+        $this->getDataGenerator()->create_module('quiz', ['course' => $course->id, 'quizpassword' => 'regular']);
 
         $result = (new deprecated())->get_result();
 
@@ -72,15 +72,16 @@ class check_deprecated_test extends \advanced_testcase {
         $this->resetAfterTest();
 
         $course = $this->getDataGenerator()->create_course();
-        $hlquiz = $this->getDataGenerator()->create_module('quiz', [
+        // The quiz generator takes the form field 'quizpassword' and stores it in quiz.password.
+        $hlquiz =$this->getDataGenerator()->create_module('quiz', [
             'course' => $course->id,
             'name' => 'Proctored midterm',
-            'password' => HL_NO_EDIT . 'placeholder',
+            'quizpassword' => HL_NO_EDIT . 'placeholder',
         ]);
         $this->getDataGenerator()->create_module('quiz', [
             'course' => $course->id,
             'name' => 'Practice quiz',
-            'password' => 'HLXNOXEDIT',
+            'quizpassword' => 'HLXNOXEDIT',
         ]);
 
         $result = (new deprecated())->get_result();
@@ -107,7 +108,7 @@ class check_deprecated_test extends \advanced_testcase {
         for ($i = 0; $i < $total; $i++) {
             $this->getDataGenerator()->create_module('quiz', [
                 'course' => $course->id,
-                'password' => HL_NO_EDIT . $i,
+                'quizpassword' => HL_NO_EDIT . $i,
             ]);
         }
 

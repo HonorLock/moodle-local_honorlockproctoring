@@ -29,5 +29,5 @@ $plugin->component = 'local_honorlockproctoring';
 $plugin->release = '1.0.6 (deprecated)';
 $plugin->version = 2026112300;
 $plugin->requires = 2020061500;
-$plugin->supported = [309, 403];
+$plugin->supported = [39, 403];
 $plugin->maturity = MATURITY_STABLE;
