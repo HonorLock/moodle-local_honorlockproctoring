@@ -13,7 +13,9 @@
 
 - **Upgrade Moodle.** The quiz access plugin needs Moodle 4.5 or later. If your site runs an older version, upgrade Moodle first, following Moodle's upgrade path.
 - **Plan a quiet window.** Proctoring is paused for affected quizzes until Honorlock finishes the switch. Avoid scheduling Honorlock-proctored exams during this time.
-- **Make sure you can sign in to Honorlock as an administrator.** You'll use your existing client ID with a newly generated client secret, from the [API Clients](https://app.honorlock.com/organization/apiclients) page. Don't generate the new secret yet: as soon as you do, this plugin stops working. Step 2 tells you when.
+- **Check how you'll get a new client secret.** You'll use your existing client ID with a newly generated client secret. Don't generate the new secret yet: as soon as you do, this plugin stops working. Step 2 tells you when.
+  - If you can sign in to Honorlock as an administrator, you can generate it yourself on the [API Clients](https://app.honorlock.com/organization/apiclients) page.
+  - If you can't access Honorlock or the API Clients page, contact Honorlock support or your Customer Success Manager before you start. Agree on a time for them to generate the new secret and share it with you through a secure channel.
 
 ### Step 1: Replace this plugin with the quiz access plugin
 
@@ -24,7 +26,11 @@
 
 ### Step 2: Activate the quiz access plugin
 
-1. In Honorlock, go to [API Clients](https://app.honorlock.com/organization/apiclients) and generate a new client secret for your existing client ID. Copy it and store it safely to use in the following steps. **Generating a new secret immediately stops this plugin from connecting to Honorlock.**
+1. Get a new client secret for your existing client ID. **Generating a new secret immediately stops this plugin from connecting to Honorlock.**
+   - If you have access, go to [API Clients](https://app.honorlock.com/organization/apiclients) in Honorlock and generate a new client secret.
+   - If you don't, ask Honorlock support or your Customer Success Manager to generate it now and share it with you through a secure channel.
+
+   Copy the secret and store it safely to use in the following steps.
 2. In Moodle, go to **Site administration > Plugins > Activity modules > Quiz > Honorlock Proctoring Service**.
 3. Click **Activate**, enter your client ID and the new client secret, and click **Activate**.
 4. Copy the installation configuration details shown. Activation sets up the web service account, a new token and the LTI tool for Honorlock.
